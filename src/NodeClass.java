@@ -18,9 +18,9 @@ public class NodeClass<T> implements Node<T>{
 	}
 	
 	@Override
-	public void setValue(Node<T> n)
+	public void setValue(T n)
 	{
-		
+		data = n;
 	}
 
 	@Override
@@ -38,13 +38,13 @@ public class NodeClass<T> implements Node<T>{
 	@Override
 	public NodeClass<T> getNext() {
 		// TODO Auto-generated method stub
-		return null;
+		return next;
 	}
 
 	@Override
 	public NodeClass<T> getPrev() {
 		// TODO Auto-generated method stub
-		return null;
+		return previous;
 	}
 	
 	public static void main(String[] args) {

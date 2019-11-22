@@ -3,7 +3,7 @@ public interface Node<T> {
 
 	public T getValue();
 	
-	public void setValue(Node<T> n);
+	public void setValue(T n);
 	
 	/*
 	 * Sets the next node reference
