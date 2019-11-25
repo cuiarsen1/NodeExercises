@@ -1,10 +1,11 @@
+import java.util.ArrayList;
 
-public class NodeClass<T> implements Node<T>{
+public class NodeClass<T> implements Node<T> {
 
 	private T data;
 	
-	private NodeClass<T> next;
-	private NodeClass<T> previous;
+	private Node<T> next;
+	private Node<T> previous;
 	
 	public NodeClass(T n)
 	{
@@ -13,42 +14,56 @@ public class NodeClass<T> implements Node<T>{
 
 	@Override
 	public T getValue() {
-		// TODO Auto-generated method stub
-		return null;
+		return data;
 	}
 	
 	@Override
-	public void setValue(T n)
-	{
+	public void setValue(T n) {
 		data = n;
 	}
 
 	@Override
 	public void setNext(Node<T> n) {
-		// TODO Auto-generated method stub
-		
+		next = n;
 	}
 
 	@Override
 	public void setPrev(Node<T> n) {
-		// TODO Auto-generated method stub
+		previous = n;
 		
 	}
 
 	@Override
-	public NodeClass<T> getNext() {
-		// TODO Auto-generated method stub
+	public Node<T> getNext() {
 		return next;
 	}
 
 	@Override
-	public NodeClass<T> getPrev() {
-		// TODO Auto-generated method stub
+	public Node<T> getPrev() {
 		return previous;
 	}
 	
+	public String toString() {
+		return data.toString();
+	}
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		NodeClass<Integer> n = new NodeClass(new Integer(5));
+		NodeClass<Integer> m = new NodeClass(new Integer(5));
+		
+		NodeClass<String> s = new NodeClass(new String("Hello World"));
+		
+		n.setNext(m);
+		
+		ArrayList<NodeClass> list = new ArrayList();
+		
+		list.add(n);
+		list.add(s);
+		
+		for (int i = 0; i < list.size(); i += 1)
+		{
+			System.out.println(list.get(i));
+		}
 	}
 }
