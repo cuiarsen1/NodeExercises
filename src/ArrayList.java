@@ -14,7 +14,7 @@ public interface ArrayList<T> {
 	 * Removes the ith node from the array list
 	 */
 	public Node<T> removeNode(int i);
-
+	
 	public Node<T> getFirstNode();
 	
 	public Node<T> getLastNode();
@@ -25,4 +25,14 @@ public interface ArrayList<T> {
 	 * Returns a String representation of this array list, each node is separated by a space
 	 */
 	public String toString();
+	
+	/*
+	 * Insert a Node n at the ith position of this list
+	 */
+	public void insertNode(Node<T> n, int i);
+
+	/*
+	 * Returns the ith node from the array list
+	 */
+	public Node<T> getNode(int i);
 }
