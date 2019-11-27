@@ -55,7 +55,7 @@ public class ArrayListClass<T> implements ArrayList<T> {
 		
 		for (int i = 0; i < list.length; i += 1)
 		{
-			if (list[i].equals(n))
+			if (list[i].getValue() == n.getValue())
 			{
 				index = i;
 				
