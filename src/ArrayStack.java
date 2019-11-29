@@ -18,7 +18,7 @@ public interface ArrayStack<T> {
 	/*
 	 * Returns the node at the top of the stack but does not remove it
 	 */
-	public Node<T> peek(); //dequeue side
+	public Node<T> peek(); //dequeue side for Queue
 	
 	/*
 	 * returns the number of nodes on the stack
