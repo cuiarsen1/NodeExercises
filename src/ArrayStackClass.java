@@ -86,6 +86,8 @@ public class ArrayStackClass<T> implements ArrayStack<T> {
 		array.push(new NodeClass(2));
 		array.push(new NodeClass(3));
 		
+		array.pop();
+		
 		System.out.println(array.size());
 		System.out.println(array);
 		

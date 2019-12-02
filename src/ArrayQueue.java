@@ -3,7 +3,7 @@ public interface ArrayQueue<T> {
 	/*
 	 * Inserts a node at the end of the queue
 	 */
-	public void enqueue(Node<T> node);
+	public void enqueue(Node<T> n);
 	
 	/*
 	 * Remove and return the first node of the queue, if the queue is not empty
@@ -13,7 +13,7 @@ public interface ArrayQueue<T> {
 	/*
 	 * Returns the first node in the queue but does not remove it
 	 */
-	public Node<T> peek();
+	public Node<T> peek(); // dequeue side
 	
 	/*
 	 * returns the number of nodes in the queue
