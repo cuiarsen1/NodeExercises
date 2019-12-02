@@ -90,8 +90,6 @@ public class ArrayStackClass<T> implements ArrayStack<T> {
 		System.out.println(array);
 		
 		
-		
-		
 	}
 
 }

@@ -124,7 +124,7 @@ public class LinkedListClass<T> implements LinkedList<T> {
 		for (int i = 0; i < length; i += 1)
 		{
 			temp = temp.getNext();
-			s += temp.getValue() + " ";
+			s += temp + " ";
 		}
 		
 		return s;
