@@ -1,12 +1,12 @@
 
-public class LListStackClass<T> implements LListStack<T> {
+public class LListQueueClass<T> implements LListQueue<T> {
 	
 	private NodeClass<T> head;
 	private NodeClass<T> tail;
 	
 	private int length;
 	
-	public LListStackClass()
+	public LListQueueClass()
 	{
 		head = new NodeClass<T>(null);
 		tail = new NodeClass<T>(null);
@@ -18,46 +18,50 @@ public class LListStackClass<T> implements LListStack<T> {
 	}
 	
 	@Override
-	public void push(Node<T> n) {
+	public void enqueue(Node<T> n) {
+
+		Node<T> temp = head.getNext();
 		
-		n.setPrev(tail.getPrev());
-		tail.getPrev().setNext(n);
-		tail.setPrev(n);
-		n.setNext(tail);
+		head.setNext(n);
+		n.setPrev(head);
+		n.setNext(temp);
+		temp.setPrev(n);
 		
 		length += 1;
 	}
-	
+
 	@Override
-	public Node<T> pop() {
+	public Node<T> dequeue() {
 		
-		Node<T> removedNode = tail.getPrev();
+		Node<T> temp = tail.getPrev();
 		
-		tail.setPrev(removedNode.getPrev());
-		removedNode.getPrev().setNext(tail);
+		temp.getPrev().setNext(tail);
+		tail.setPrev(temp);
 		
 		length -= 1;
 		
-		return removedNode;
+		return temp;
 	}
-	
+
 	@Override
 	public Node<T> peek() {
-		
+
 		return tail.getPrev();
 	}
-	
+
 	@Override
 	public int size() {
 
 		return length;
 	}
-	
+
 	@Override
 	public boolean isEmpty() {
 
 		if (length > 0)
 			return false;
+		else if (length == 0)
+			return true;
 		
 		return true;
 	}
@@ -80,17 +84,18 @@ public class LListStackClass<T> implements LListStack<T> {
 	
 	public static void main(String[] args) {
 
-		LListStackClass<Integer> list = new LListStackClass();
+		LListQueueClass<Integer> list = new LListQueueClass();
 		
-		list.push(new NodeClass(1));
-		list.push(new NodeClass(2));
-		list.push(new NodeClass(3));
+		list.enqueue(new NodeClass(1));
+		list.enqueue(new NodeClass(2));
+		list.enqueue(new NodeClass(3));
 		
-		list.pop();
+		list.dequeue();
 		
 		System.out.println(list);
 		
+		System.out.println(list.size());
+
 	}
-	
 
 }

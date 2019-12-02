@@ -3,8 +3,6 @@ public class ArrayStackClass<T> implements ArrayStack<T> {
 	
 	private Node<T>[] list;
 	
-	private int length;
-	
 	public ArrayStackClass(int n)
 	{
 		list = new Node[n];

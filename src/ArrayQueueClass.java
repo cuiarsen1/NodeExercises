@@ -28,37 +28,71 @@ public class ArrayQueueClass<T> implements ArrayQueue<T> {
 		
 		Node<T> object = queue[queue.length - 1];
 		
-		queue[]
+		Node<T>[] temp = queue;
+		
+		queue = new Node[temp.length - 1];
+		
+		for (int i = 0; i < queue.length; i += 1)
+		{
+			queue[i] = temp[i];
+		}
 		
 		return object;
+		
 	}
 
 	@Override
 	public Node<T> peek() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return queue[queue.length - 1];
+		
+		
 	}
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+
+		return queue.length;
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+
+		if (queue.length > 0)
+			return false;
+		else if (queue.length == 0)
+			return true;
+
+		return true;
 	}
+	
 	
 	@Override
 	public String toString() {
 		
+		String s = "";
+		
+		for (int i = queue.length - 1; i >= 0; i -= 1)
+		{
+			s += queue[i] + " ";
+		}
+		
+		return s;
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		ArrayQueueClass<Integer> list = new ArrayQueueClass(0);
+		
+		list.enqueue(new NodeClass(1));
+		list.enqueue(new NodeClass(2));
+		list.enqueue(new NodeClass(3));
+		
+		list.dequeue();
+		
+		System.out.println(list.size());
+		
+		System.out.println(list);
 	}
 
 
