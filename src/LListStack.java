@@ -7,22 +7,22 @@ public interface LListStack<T> {
 	 */
 	
 	/*
-	 * Places (or pushes) a node on the stack
+	 * Places (or pushes) a NodeClass on the stack
 	 */
-	public void push(Node<T> n);
+	public void push(NodeClass<T> n);
 		
 	/*
-	 * Removes (or pops) a node from the top of the stack
+	 * Removes (or pops) a NodeClass from the top of the stack
 	 */
-	public Node<T> pop();
+	public NodeClass<T> pop();
 	
 	/*
-	 * Returns the node at the top of the stack but does not remove it
+	 * Returns the NodeClass at the top of the stack but does not remove it
 	 */
-	public Node<T> peek();
+	public NodeClass<T> peek();
 	
 	/*
-	 * returns the number of nodes on the stack
+	 * returns the number of NodeClasss on the stack
 	 */
 	public int size();
 	

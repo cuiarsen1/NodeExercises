@@ -1,19 +1,19 @@
 
 public class ArrayQueueClass<T> implements ArrayQueue<T> {
 	
-	private Node<T>[] queue;
+	private NodeClass<T>[] queue;
 	
 	public ArrayQueueClass(int n)
 	{
-		queue = new Node[n];
+		queue = new NodeClass[n];
 	}
 
 	@Override
-	public void enqueue(Node<T> n) {
+	public void enqueue(NodeClass<T> n) {
 
-		Node<T>[] temp = queue;
+		NodeClass<T>[] temp = queue;
 		
-		queue = new Node[temp.length + 1];
+		queue = new NodeClass[temp.length + 1];
 		
 		for (int i = 0; i < temp.length; i += 1)
 		{
@@ -24,13 +24,13 @@ public class ArrayQueueClass<T> implements ArrayQueue<T> {
 	}
 
 	@Override
-	public Node<T> dequeue() {
+	public NodeClass<T> dequeue() {
 		
-		Node<T> object = queue[queue.length - 1];
+		NodeClass<T> object = queue[queue.length - 1];
 		
-		Node<T>[] temp = queue;
+		NodeClass<T>[] temp = queue;
 		
-		queue = new Node[temp.length - 1];
+		queue = new NodeClass[temp.length - 1];
 		
 		for (int i = 0; i < queue.length; i += 1)
 		{
@@ -42,7 +42,7 @@ public class ArrayQueueClass<T> implements ArrayQueue<T> {
 	}
 
 	@Override
-	public Node<T> peek() {
+	public NodeClass<T> peek() {
 		
 		return queue[queue.length - 1];
 		

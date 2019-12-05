@@ -3,21 +3,21 @@ public interface ArrayList<T> {
 	 * Adds a node to the end of this array list.
 	 * @param n
 	 */
-	public void addNode(Node<T> n);
+	public void addNode(NodeClass<T> n);
 
 	/*
 	 * Removes a given node from the array list
 	 */
-	public void removeNode(Node<T> n);
+	public void removeNode(NodeClass<T> n);
 	
 	/*
 	 * Removes the ith node from the array list
 	 */
-	public Node<T> removeNode(int i);
+	public NodeClass<T> removeNode(int i);
 	
-	public Node<T> getFirstNode();
+	public NodeClass<T> getFirstNode();
 	
-	public Node<T> getLastNode();
+	public NodeClass<T> getLastNode();
 	
 	public int size();
 	
@@ -29,10 +29,10 @@ public interface ArrayList<T> {
 	/*
 	 * Insert a Node n at the ith position of this list
 	 */
-	public void insertNode(Node<T> n, int i);
+	public void insertNode(NodeClass<T> n, int i);
 
 	/*
 	 * Returns the ith node from the array list
 	 */
-	public Node<T> getNode(int i);
+	public NodeClass<T> getNode(int i);
 }

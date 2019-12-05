@@ -18,7 +18,7 @@ public class LinkedListClass<T> implements LinkedList<T> {
 	}
 	
 	@Override
-	public void addNode(Node<T> n) {
+	public void addNodeClass(NodeClass<T> n) {
 		
 		n.setPrev(tail.getPrev());
 		tail.getPrev().setNext(n);
@@ -30,9 +30,9 @@ public class LinkedListClass<T> implements LinkedList<T> {
 	}
 
 	@Override
-	public void insertNode(Node<T> n, int i) {
+	public void insertNodeClass(NodeClass<T> n, int i) {
 
-		Node<T> temp = head.getNext();
+		NodeClass<T> temp = head.getNext();
 		
 		for (int x = 0; x < i; x += 1)
 		{
@@ -48,9 +48,9 @@ public class LinkedListClass<T> implements LinkedList<T> {
 	}
 	
 	@Override
-	public void removeNode(Node<T> n) {
+	public void removeNodeClass(NodeClass<T> n) {
 		
-		Node<T> temp = head.getNext();
+		NodeClass<T> temp = head.getNext();
 
 		for (int i = 0; i < length; i += 1)
 		{
@@ -67,9 +67,9 @@ public class LinkedListClass<T> implements LinkedList<T> {
 	}
 
 	@Override
-	public Node<T> removeNode(int i) {
+	public NodeClass<T> removeNodeClass(int i) {
 		
-		Node<T> temp = head.getNext();
+		NodeClass<T> temp = head.getNext();
 
 		for (int x = 0; x < i; x += 1)
 		{
@@ -86,9 +86,9 @@ public class LinkedListClass<T> implements LinkedList<T> {
 	}
 
 	@Override
-	public Node<T> getNode(int i) {
+	public NodeClass<T> getNodeClass(int i) {
 		
-		Node<T> temp = head.getNext();
+		NodeClass<T> temp = head.getNext();
 		
 		for (int x = 0; x < i; x += 1)
 		{
@@ -99,13 +99,13 @@ public class LinkedListClass<T> implements LinkedList<T> {
 	}
 
 	@Override
-	public Node<T> getFirstNode() {
+	public NodeClass<T> getFirstNodeClass() {
 
 		return head.getNext();
 	}
 
 	@Override
-	public Node<T> getLastNode() {
+	public NodeClass<T> getLastNodeClass() {
 		return tail.getPrev();
 	}
 
@@ -119,7 +119,7 @@ public class LinkedListClass<T> implements LinkedList<T> {
 		
 		String s = "";
 		
-		Node<T> temp = head;
+		NodeClass<T> temp = head;
 		
 		for (int i = 0; i < length; i += 1)
 		{
@@ -134,9 +134,9 @@ public class LinkedListClass<T> implements LinkedList<T> {
 
 		LinkedListClass<Integer> list = new LinkedListClass();
 		
-		list.addNode(new NodeClass(1));
-		list.addNode(new NodeClass(2));
-		list.addNode(new NodeClass(3));
+		list.addNodeClass(new NodeClass(1));
+		list.addNodeClass(new NodeClass(2));
+		list.addNodeClass(new NodeClass(3));
 		
 		System.out.println(list);
 		

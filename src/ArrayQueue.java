@@ -1,22 +1,22 @@
 public interface ArrayQueue<T> {
 	
 	/*
-	 * Inserts a node at the end of the queue
+	 * Inserts a NodeClass at the end of the queue
 	 */
-	public void enqueue(Node<T> n);
+	public void enqueue(NodeClass<T> n);
 	
 	/*
-	 * Remove and return the first node of the queue, if the queue is not empty
+	 * Remove and return the first NodeClass of the queue, if the queue is not empty
 	 */
-	public Node<T> dequeue();
+	public NodeClass<T> dequeue();
 	
 	/*
-	 * Returns the first node in the queue but does not remove it
+	 * Returns the first NodeClass in the queue but does not remove it
 	 */
-	public Node<T> peek(); // dequeue side
+	public NodeClass<T> peek(); // dequeue side
 	
 	/*
-	 * returns the number of nodes in the queue
+	 * returns the number of NodeClass in the queue
 	 */
 	public int size();
 	

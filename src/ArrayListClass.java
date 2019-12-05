@@ -1,21 +1,21 @@
 
 public class ArrayListClass<T> implements ArrayList<T> {
 	
-	private Node<T>[] list;
+	private NodeClass<T>[] list;
 
 	public ArrayListClass(int n)
 	{
-		list = new Node[n];
+		list = new NodeClass[n];
 	}
 	
 	@Override
-	public void addNode(Node<T> n) {
+	public void addNode(NodeClass<T> n) {
 		
-		Node<T>[] listTemp = list;
+		NodeClass<T>[] listTemp = list;
 		
 		int newSize = list.length + 1;
 		
-		list = new Node[newSize];
+		list = new NodeClass[newSize];
 		
 		for (int i = 0; i < listTemp.length; i += 1)
 		{
@@ -27,13 +27,13 @@ public class ArrayListClass<T> implements ArrayList<T> {
 	}
 	
 	@Override
-	public void insertNode(Node<T> n, int i) {
+	public void insertNode(NodeClass<T> n, int i) {
 		
-		Node<T>[] listTemp = list;
+		NodeClass<T>[] listTemp = list;
 		
 		int newSize = list.length + 1;
 		
-		list = new Node[newSize];
+		list = new NodeClass[newSize];
 		
 		for (int x = 0; x < i; x += 1)
 		{
@@ -49,7 +49,7 @@ public class ArrayListClass<T> implements ArrayList<T> {
 	}
 	
 	@Override
-	public void removeNode(Node<T> n) {
+	public void removeNode(NodeClass<T> n) {
 		
 		int index = 0;
 		
@@ -73,9 +73,9 @@ public class ArrayListClass<T> implements ArrayList<T> {
 	}
 	
 	@Override
-	public Node<T> removeNode(int i) {
+	public NodeClass<T> removeNode(int i) {
 		
-		Node<T> node = list[i];
+		NodeClass<T> node = list[i];
 		
 		for (int x = i; x < list.length - 1; x += 1)
 		{
@@ -88,18 +88,18 @@ public class ArrayListClass<T> implements ArrayList<T> {
 	}
 	
 	@Override
-	public Node<T> getNode(int i) {
+	public NodeClass<T> getNode(int i) {
 	
 		return list[i];
 	}
 
 	@Override
-	public Node<T> getFirstNode() {
+	public NodeClass<T> getFirstNode() {
 		return list[0];
 	}
 
 	@Override
-	public Node<T> getLastNode() {
+	public NodeClass<T> getLastNode() {
 		return list[list.length - 1];
 	}
 

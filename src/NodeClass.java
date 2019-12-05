@@ -4,8 +4,8 @@ public class NodeClass<T> implements Node<T> {
 
 	private T data;
 	
-	private Node<T> next;
-	private Node<T> previous;
+	private NodeClass<T> next;
+	private NodeClass<T> previous;
 	
 	public NodeClass(T n)
 	{
@@ -23,23 +23,23 @@ public class NodeClass<T> implements Node<T> {
 	}
 
 	@Override
-	public void setNext(Node<T> n) {
+	public void setNext(NodeClass<T> n) {
 		next = n;
 	}
 
 	@Override
-	public void setPrev(Node<T> n) {
+	public void setPrev(NodeClass<T> n) {
 		previous = n;
 		
 	}
 
 	@Override
-	public Node<T> getNext() {
+	public NodeClass<T> getNext() {
 		return next;
 	}
 
 	@Override
-	public Node<T> getPrev() {
+	public NodeClass<T> getPrev() {
 		return previous;
 	}
 	

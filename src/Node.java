@@ -8,22 +8,22 @@ public interface Node<T> {
 	/*
 	 * Sets the next node reference
 	 */
-	public void setNext(Node<T> n);
+	public void setNext(NodeClass<T> n);
 	
 	/*
 	 * Sets the previous node reference
 	 */
-	public void setPrev(Node<T> n);
+	public void setPrev(NodeClass<T> n);
 	
 	/*
 	 * Returns a reference to the next node
 	 */
-	public Node<T> getNext();
+	public NodeClass<T> getNext();
 	
 	/*
 	 * Returns a reference to the previous node
 	 */
-	public Node<T> getPrev();
+	public NodeClass<T> getPrev();
 	
 	public String toString();
 

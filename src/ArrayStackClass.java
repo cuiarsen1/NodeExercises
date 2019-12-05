@@ -1,19 +1,19 @@
 
 public class ArrayStackClass<T> implements ArrayStack<T> {
 	
-	private Node<T>[] list;
+	private NodeClass<T>[] list;
 	
 	public ArrayStackClass(int n)
 	{
-		list = new Node[n];
+		list = new NodeClass[n];
 	}
 	
 	@Override
-	public void push(Node<T> n) {
+	public void push(NodeClass<T> n) {
 
-		Node<T>[] temp = list;
+		NodeClass<T>[] temp = list;
 		
-		list = new Node[temp.length + 1];
+		list = new NodeClass[temp.length + 1];
 		
 		for (int i = 0; i < temp.length; i += 1)
 		{
@@ -25,13 +25,13 @@ public class ArrayStackClass<T> implements ArrayStack<T> {
 	}
 
 	@Override
-	public Node<T> pop() {
+	public NodeClass<T> pop() {
 		
-		Node<T> object = list[list.length - 1];
+		NodeClass<T> object = list[list.length - 1];
 		
-		Node<T>[] temp = list;
+		NodeClass<T>[] temp = list;
 		
-		list = new Node[temp.length - 1];
+		list = new NodeClass[temp.length - 1];
 		
 		for (int i = 0; i < list.length; i += 1)
 		{
@@ -43,7 +43,7 @@ public class ArrayStackClass<T> implements ArrayStack<T> {
 	}
 
 	@Override
-	public Node<T> peek() {
+	public NodeClass<T> peek() {
 		
 		return list[list.length - 1];
 	}

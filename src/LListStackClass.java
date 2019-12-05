@@ -18,7 +18,7 @@ public class LListStackClass<T> implements LListStack<T> {
 	}
 	
 	@Override
-	public void push(Node<T> n) {
+	public void push(NodeClass<T> n) {
 		
 		n.setPrev(tail.getPrev());
 		tail.getPrev().setNext(n);
@@ -29,20 +29,20 @@ public class LListStackClass<T> implements LListStack<T> {
 	}
 	
 	@Override
-	public Node<T> pop() {
+	public NodeClass<T> pop() {
 		
-		Node<T> removedNode = tail.getPrev();
+		NodeClass<T> removedNodeClass = tail.getPrev();
 		
-		tail.setPrev(removedNode.getPrev());
-		removedNode.getPrev().setNext(tail);
+		tail.setPrev(removedNodeClass.getPrev());
+		removedNodeClass.getPrev().setNext(tail);
 		
 		length -= 1;
 		
-		return removedNode;
+		return removedNodeClass;
 	}
 	
 	@Override
-	public Node<T> peek() {
+	public NodeClass<T> peek() {
 		
 		return tail.getPrev();
 	}
@@ -67,7 +67,7 @@ public class LListStackClass<T> implements LListStack<T> {
 		
 		String s = "";
 		
-		Node<T> temp = tail;
+		NodeClass<T> temp = tail;
 		
 		for (int i = length; i > 0; i -= 1)
 		{

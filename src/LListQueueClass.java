@@ -18,9 +18,9 @@ public class LListQueueClass<T> implements LListQueue<T> {
 	}
 	
 	@Override
-	public void enqueue(Node<T> n) {
+	public void enqueue(NodeClass<T> n) {
 
-		Node<T> temp = head.getNext();
+		NodeClass<T> temp = head.getNext();
 		
 		head.setNext(n);
 		n.setPrev(head);
@@ -31,9 +31,9 @@ public class LListQueueClass<T> implements LListQueue<T> {
 	}
 
 	@Override
-	public Node<T> dequeue() {
+	public NodeClass<T> dequeue() {
 		
-		Node<T> temp = tail.getPrev();
+		NodeClass<T> temp = tail.getPrev();
 		
 		temp.getPrev().setNext(tail);
 		tail.setPrev(temp);
@@ -44,7 +44,7 @@ public class LListQueueClass<T> implements LListQueue<T> {
 	}
 
 	@Override
-	public Node<T> peek() {
+	public NodeClass<T> peek() {
 
 		return tail.getPrev();
 	}
@@ -71,7 +71,7 @@ public class LListQueueClass<T> implements LListQueue<T> {
 		
 		String s = "";
 		
-		Node<T> temp = tail;
+		NodeClass<T> temp = tail;
 		
 		for (int i = length; i > 0; i -= 1)
 		{
